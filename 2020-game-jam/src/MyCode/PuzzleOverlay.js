@@ -28,12 +28,12 @@ function PuzzleOverlay(props) {
     >
       <div className="puzzle-container">
         <Puzzle
-          staticSquares={[[0,0,-2]]}
-          colorList={["black", "white", "red"]}
-          rows="4"
-          cols="4"
+          staticSquares={props.staticSquares}
+          colorList={props.colorList}
+          rows={props.rows}
+          cols={props.cols}
           onSolvePuzzle={closeModal}
-          solution={[[-2, 0, 0, 2], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]}
+          solution={props.solution}
         />
         <button className="close-puzzle-button" onClick={closeModal}>
           Close Modal
